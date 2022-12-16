@@ -1,19 +1,20 @@
 import numpy as np
 import pandas as pd
 
-"""Requerimiento 1"""
+"""Requerimiento 1"""   ;print("""Requerimiento 1:""")
 array1 = np.linspace(1, 50)
 array2 = np.linspace(50, 150, 101)
+print(array1)       ; print("")
+print(array2)       ; print("")
 
 
-
-"""Requerimiento 2"""
+"""Requerimiento 2"""   ;print("""Requerimiento 2:""")
 paridad = [f"{num} es par" if num % 2 == 0 else f"{num} es impar" for num in array1]
 for elem in paridad:
     print(elem)
+print("")
 
-
-"""Requerimiento 3"""
+"""Requerimiento 3"""   ;print("""Requerimiento 3:""")
 # Contadores para cada condición
 div_por_2_o_3 = 0
 div_por_2_y_3 = 0
@@ -38,15 +39,22 @@ print(f"Número de elementos divisibles por 2 o 3: {div_por_2_o_3}")
 print(f"Número de elementos divisibles por 2 y 3: {div_por_2_y_3}")
 print(f"Número de elementos divisibles por 3 pero no 2: {div_por_3_pero_no_2}")
 print(f"Número de elementos no divisibles por 2 y 3: {no_div_por_2_ni_3}")
+print("")
 
 
+"""Requerimiento 4"""   ;print("""Requerimiento 4:""")
+for i in range(100):
+    print(i**2)
+# La varaible 'I' no está definida
+print("")
 
-"""Requerimiento 5"""
+
+"""Requerimiento 5"""   ;print("""Requerimiento 5:""")
 df = pd.read_csv('flights.csv')
 
 # Media de passengers
 mean_passengers = df['passengers'].mean()
-print(f"\nLa media de passengers es: {mean_passengers}\n")
+print(f"La media de passengers es: {mean_passengers}")
 
 # Nueva columna 'underperforming'
 df['underperforming'] = 0
@@ -56,17 +64,17 @@ for index, obs in df['passengers'].items():
     if obs < mean_passengers:
         df.at[index, 'underperforming'] = 1
 
+print(df)
+print("")
 
 
-"""Requerimiento 6"""
-
+"""Requerimiento 6"""   ;print("""Requerimiento 6:""")
 # Media y desviación estándar de passengers
-mean_passengers = df['passengers'].mean() # esto se calculó anteriormente
+# La media se calculó anteriormente, línea 55
 std_passengers =  df['passengers'].std()
 
-print(f"\nLa mediana de passengers es: {mean_passengers}")
+print(f"La media de passengers es: {mean_passengers}")
 print(f"La desviación estándar de passengers es: {std_passengers}\n")
-
 
 # Nueva columna 'outlier'
 df['outlier'] = 0
@@ -79,4 +87,5 @@ for index, obs in df['passengers'].items():
         df.at[index, 'outlier'] = 1
 
 print(df)
-print(f"La cantidad de observaciones clasificadas como casos extremos es: {outlier_count}")
+print(f"\nLa cantidad de observaciones clasificadas como casos extremos es: {outlier_count}\n")
+
