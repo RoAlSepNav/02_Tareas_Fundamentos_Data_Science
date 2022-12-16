@@ -82,7 +82,7 @@ df['outlier'] = 0
 # Asignamos un 1 a la columna df.outlier según las condiciones indicadas
 outlier_count = 0 
 for index, obs in df['passengers'].items():
-    if (obs < mean_passengers-std_passengers) | (obs > mean_passengers+std_passengers):
+    if (obs < mean_passengers - std_passengers) | (obs > mean_passengers + std_passengers):
         outlier_count += 1
         df.at[index, 'outlier'] = 1
 
