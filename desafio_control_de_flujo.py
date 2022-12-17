@@ -49,12 +49,14 @@ for i in range(100):
 print("")
 
 
+
 """Requerimiento 5"""   ;print("""Requerimiento 5:""")
 df = pd.read_csv('flights.csv')
 
 # Media de passengers
 mean_passengers = df['passengers'].mean()
-print(f"La media de passengers es: {mean_passengers}")
+print(f"La media de passengers es: {round(mean_passengers,4)}")
+
 
 # Nueva columna 'underperforming'
 df['underperforming'] = 0
@@ -70,11 +72,11 @@ print("")
 
 """Requerimiento 6"""   ;print("""Requerimiento 6:""")
 # Media y desviación estándar de passengers
-# La media se calculó anteriormente, línea 55
+# La media se calculó anteriormente, línea 56
 std_passengers =  df['passengers'].std()
 
-print(f"La media de passengers es: {mean_passengers}")
-print(f"La desviación estándar de passengers es: {std_passengers}\n")
+print(f"La media de passengers es: {round(mean_passengers,4)}")
+print(f"La desviación estándar de passengers es: {round(std_passengers,4)}\n")
 
 # Nueva columna 'outlier'
 df['outlier'] = 0
