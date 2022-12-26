@@ -183,6 +183,6 @@ def simulate_pets_prob(n):
 print(simulate_pets_prob(10))
 
 print("De los tres escenarios, ¿Cuál es el menos probable? ¿Cuál es el más probable? ¿Por qué?")
-print("R: para n = 10, el caso 3 es el menos probable, el caso 1 es el más probable. ")
+print("""R: para n = 10, el caso 3 es el menos probable, el caso 1 es el más probable. 
+Para este caso la cantidad de ocurrencias van de mayor a menor para el caso 1, 2 y 3""")
 
-# cd g56/02_Fundamentos_Data_Science/S2
